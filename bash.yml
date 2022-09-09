@@ -1,0 +1,8 @@
+- name: Bash Job
+  hosts: all
+  remote_user: ansible
+  tasks:
+    - name: Bash Process
+      shell: cat /etc/fstab
+      register: shell_output
+    - debug: var=shell_output
